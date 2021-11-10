@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "assigned_user_id": {
+            "type": "integer"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "description": {
+            "type": "string"
+        },
+        "completed": {
+            "type": "boolean"
+        },
+        "assigned_user_id": {
+            "type": "integer"
+        }
+    }
+}
