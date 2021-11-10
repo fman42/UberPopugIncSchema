@@ -1,8 +1,9 @@
 {
     "type": "object",
     "properties": {
-        "id": {
+        "public_user_id": {
             "type": "integer"
         }
-    }
+    },
+    "required": ["public_user_id"]
 }

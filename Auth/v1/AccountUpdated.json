@@ -1,7 +1,7 @@
 {
     "type": "object",
     "properties": {
-        "id": {
+        "public_user_id": {
             "type": "integer"
         },
         "name": {
@@ -13,5 +13,6 @@
         "role": {
             "type": "string"
         }
-    }
+    },
+    "required": ["public_user_id", "name", "email", "role"]
 }
