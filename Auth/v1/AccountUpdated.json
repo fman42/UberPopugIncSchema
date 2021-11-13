@@ -1,18 +1,38 @@
 {
-    "type": "object",
-    "properties": {
-        "public_user_id": {
-            "type": "integer"
-        },
-        "name": {
-            "type": "string"
-        },
-        "email": {
-            "type": "string"
-        },
-        "role": {
-            "type": "string"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "definitions": {
+        "account": {
+            "type": "object",
+            "properties": {
+                "public_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                }
+            },
+            "required": ["public_id", "name", "email", "role"]
         }
     },
-    "required": ["public_user_id", "name", "email", "role"]
+
+    "type": "object",
+
+    "properties": {
+        "version": {
+            "enum": [1],
+            "default": 1
+        },
+        "data": {
+            "$ref": "#/definitions/account"
+        }
+    },
+
+    "required": ["data"]
 }

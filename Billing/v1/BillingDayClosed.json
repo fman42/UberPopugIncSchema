@@ -2,21 +2,14 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
 
     "definitions": {
-        "taskCreated": {
+        "eventData": {
             "type": "object",
             "properties": {
-                "public_id": {
+                "date": {
                     "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "completed": {
-                    "type": "boolean",
-                    "default": false
                 }
             },
-            "required": ["public_id", "description"]
+            "required": ["date"]
         }
     },
 
@@ -28,7 +21,7 @@
             "default": 1
         },
         "data": {
-            "$ref": "#/definitions/taskCreated"
+            "$ref": "#/definitions/eventData"
         }
     },
 

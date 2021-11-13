@@ -1,9 +1,29 @@
 {
-    "type": "object",
-    "properties": {
-        "id": {
-            "type": "integer"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "definitions": {
+        "taskCompleted": {
+            "type": "object",
+            "properties": {
+                "public_id": {
+                    "type": "string"
+                }
+            },
+            "required": ["public_id"]
         }
     },
-    "required": ["id"]
+
+    "type": "object",
+
+    "properties": {
+        "version": {
+            "enum": [1],
+            "default": 1
+        },
+        "data": {
+            "$ref": "#/definitions/taskCompleted"
+        }
+    },
+
+    "required": ["data"]
 }

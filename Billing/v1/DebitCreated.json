@@ -2,21 +2,17 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
 
     "definitions": {
-        "taskCreated": {
+        "debit": {
             "type": "object",
             "properties": {
-                "public_id": {
+                "public_user_id": {
                     "type": "string"
                 },
-                "description": {
-                    "type": "string"
-                },
-                "completed": {
-                    "type": "boolean",
-                    "default": false
+                "fee": {
+                    "type": "number"
                 }
             },
-            "required": ["public_id", "description"]
+            "required": ["public_user_id", "fee"]
         }
     },
 
@@ -28,7 +24,7 @@
             "default": 1
         },
         "data": {
-            "$ref": "#/definitions/taskCreated"
+            "$ref": "#/definitions/debit"
         }
     },
 
