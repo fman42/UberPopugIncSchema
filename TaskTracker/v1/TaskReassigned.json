@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "definitions": {
+        "taskReassigned": {
+            "type": "object",
+            "properties": {
+                "made_user_id": {
+                    "type": "string"
+                }
+            },
+            "required": ["made_user_id"]
+        }
+    },
+
+    "type": "object",
+
+    "properties": {
+        "version": {
+            "enum": [1],
+            "default": 1
+        },
+        "data": {
+            "$ref": "#/definitions/taskReassigned"
+        }
+    },
+
+    "required": ["data"]
+}
